@@ -1,11 +1,31 @@
+/*******************
+Global section
+*******************/
 body {
     text-align: center;
+    background-color: rgba(87,87,87,0.3);
+    font-family: 'Alegreya', serif;
+}
+/* title tags */
+.page-title {
+    font-family: Monoton;
+    font-size: 5em;
+    margin: 0.2em;
+    position: relative;
 }
 
-h1 {
-    font-family: Monoton;
-    font-size: 70px;
-    margin: 0.2em;
+.page-title:after {
+  position: absolute;
+  content: '';
+  background-color: #3F0E0E;
+  height: 2px;
+  width: 25%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  animation: colorChange 5s forwards;
+  animation-iteration-count: infinite;
 }
 
 h2 {
@@ -16,6 +36,7 @@ h2:first-of-type {
     margin-top: 0.5em;
 }
 
+/* table styles */
 table,
 tr,
 td {
@@ -35,6 +56,47 @@ td {
     width: 20px;
 }
 
+
+/****************
+Input styles
+****************/
+label {
+  color: #5e2929;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
 input[type=number] {
     width: 6em;
+    border: 2px solid #9D0000;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+input[type=submit] {
+  color: #000;
+  background-color: rgba(157, 0, 0, 0.4);
+  border: 2px solid #9D0000;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
+  padding: 5px 10px;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+}
+input[type=submit]:hover {
+  background-color: #9D0000;
+  cursor: pointer;
+}
+
+/*******************
+Keyframes animations
+*******************/
+
+@keyframes colorChange {
+  0% {background-color: #9D0000;}
+  25% {background-color: #400000}
+  50% {background-color: #000}
+  75% {background-color: #400000}
+  100% {background-color: #9D0000}
 }
